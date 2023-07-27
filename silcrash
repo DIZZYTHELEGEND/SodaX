@@ -1,0 +1,6 @@
+for i=1,100 do
+game.Players:Chat("dog all all all")
+end
+for i=1,1000 do
+game.Players:Chat("clone all all all")
+end
