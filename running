@@ -1,0 +1,1 @@
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Bad ChatBot.exe is running...", "all")
