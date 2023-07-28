@@ -1,0 +1,340 @@
+--[=[
+ d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
+88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
+88      88    88    88            odD'      88      88    88 88ooo88 
+88  ooo 88    88    88          .88'        88      88    88 88~~~88 
+88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88 
+ Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER
+]=]
+
+-- Instances: 25 | Scripts: 6 | Modules: 0
+local G2L = {};
+
+-- StarterGui.tweencopy
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"]["Name"] = [[tweencopy]];
+G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+G2L["1"]["ResetOnSpawn"] = false;
+
+-- StarterGui.tweencopy.Frame
+G2L["2"] = Instance.new("Frame", G2L["1"]);
+G2L["2"]["BorderSizePixel"] = 0;
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(21, 21, 21);
+G2L["2"]["Size"] = UDim2.new(0, 320, 0, 380);
+G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2"]["Position"] = UDim2.new(0.27098917961120605, 0, 0.07802198082208633, 0);
+
+-- StarterGui.tweencopy.Frame.UICorner
+G2L["3"] = Instance.new("UICorner", G2L["2"]);
+
+
+-- StarterGui.tweencopy.Frame.POS
+G2L["4"] = Instance.new("TextBox", G2L["2"]);
+G2L["4"]["BorderSizePixel"] = 0;
+G2L["4"]["TextSize"] = 14;
+G2L["4"]["BackgroundColor3"] = Color3.fromRGB(30, 28, 40);
+G2L["4"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["4"]["Size"] = UDim2.new(0, 209, 0, 32);
+G2L["4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4"]["Text"] = [[]];
+G2L["4"]["Position"] = UDim2.new(0.171875, 0, 0.1635959893465042, 0);
+G2L["4"]["Name"] = [[POS]];
+
+-- StarterGui.tweencopy.Frame.POS.LocalScript
+G2L["5"] = Instance.new("LocalScript", G2L["4"]);
+
+
+-- StarterGui.tweencopy.Frame.POS.UICorner
+G2L["6"] = Instance.new("UICorner", G2L["4"]);
+G2L["6"]["CornerRadius"] = UDim.new(0, 4);
+
+-- StarterGui.tweencopy.Frame.gen
+G2L["7"] = Instance.new("TextButton", G2L["2"]);
+G2L["7"]["BorderSizePixel"] = 0;
+G2L["7"]["BackgroundColor3"] = Color3.fromRGB(30, 31, 38);
+G2L["7"]["TextSize"] = 14;
+G2L["7"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["7"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["7"]["Name"] = [[gen]];
+G2L["7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7"]["Text"] = [[Generate tween]];
+G2L["7"]["Position"] = UDim2.new(0.1875, 0, 0.3476916551589966, 0);
+
+-- StarterGui.tweencopy.Frame.gen.UICorner
+G2L["8"] = Instance.new("UICorner", G2L["7"]);
+
+
+-- StarterGui.tweencopy.Frame.gen.LocalScript
+G2L["9"] = Instance.new("LocalScript", G2L["7"]);
+
+
+-- StarterGui.tweencopy.Frame.TextLabel
+G2L["a"] = Instance.new("TextLabel", G2L["2"]);
+G2L["a"]["BorderSizePixel"] = 0;
+G2L["a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["a"]["TextSize"] = 14;
+G2L["a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["a"]["Size"] = UDim2.new(0, 200, 0, 20);
+G2L["a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["a"]["Text"] = [[Position]];
+G2L["a"]["BackgroundTransparency"] = 1;
+G2L["a"]["Position"] = UDim2.new(0.18437500298023224, 0, 0.030188679695129395, 0);
+
+-- StarterGui.tweencopy.Frame.TextLabel
+G2L["b"] = Instance.new("TextLabel", G2L["2"]);
+G2L["b"]["BorderSizePixel"] = 0;
+G2L["b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["b"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["b"]["TextSize"] = 14;
+G2L["b"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["b"]["Size"] = UDim2.new(0, 200, 0, 20);
+G2L["b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["b"]["Text"] = [[Tween/generated]];
+G2L["b"]["BackgroundTransparency"] = 1;
+G2L["b"]["Position"] = UDim2.new(0.1875, 0, 0.526613712310791, 0);
+
+-- StarterGui.tweencopy.Frame.TWEEN
+G2L["c"] = Instance.new("TextBox", G2L["2"]);
+G2L["c"]["BorderSizePixel"] = 0;
+G2L["c"]["RichText"] = true;
+G2L["c"]["TextSize"] = 14;
+G2L["c"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["c"]["TextWrapped"] = true;
+G2L["c"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["c"]["BackgroundColor3"] = Color3.fromRGB(30, 28, 40);
+G2L["c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["c"]["Size"] = UDim2.new(0, 294, 0, 107);
+G2L["c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["c"]["Text"] = [[]];
+G2L["c"]["Position"] = UDim2.new(0.04062499850988388, 0, 0.6204478740692139, 0);
+G2L["c"]["Name"] = [[TWEEN]];
+G2L["c"]["ClearTextOnFocus"] = false;
+
+-- StarterGui.tweencopy.Frame.TWEEN.UICorner
+G2L["d"] = Instance.new("UICorner", G2L["c"]);
+G2L["d"]["CornerRadius"] = UDim.new(0, 4);
+
+-- StarterGui.tweencopy.Frame.TextLabel
+G2L["e"] = Instance.new("TextLabel", G2L["2"]);
+G2L["e"]["BorderSizePixel"] = 0;
+G2L["e"]["BackgroundColor3"] = Color3.fromRGB(31, 31, 41);
+G2L["e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["e"]["TextSize"] = 14;
+G2L["e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["e"]["Size"] = UDim2.new(0, 200, 0, 19);
+G2L["e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["e"]["Text"] = [[By DIZZY/dizzytheone on dsc]];
+G2L["e"]["Rotation"] = 90;
+G2L["e"]["Position"] = UDim2.new(0.6315903663635254, 0, 0.2968961298465729, 0);
+
+-- StarterGui.tweencopy.Frame.TextLabel.UICorner
+G2L["f"] = Instance.new("UICorner", G2L["e"]);
+
+
+-- StarterGui.tweencopy.Frame.Smooth GUI Dragging
+G2L["10"] = Instance.new("LocalScript", G2L["2"]);
+G2L["10"]["Name"] = [[Smooth GUI Dragging]];
+
+-- StarterGui.tweencopy.Frame.close
+G2L["11"] = Instance.new("TextButton", G2L["2"]);
+G2L["11"]["BorderSizePixel"] = 0;
+G2L["11"]["BackgroundColor3"] = Color3.fromRGB(31, 31, 31);
+G2L["11"]["TextSize"] = 14;
+G2L["11"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["11"]["TextColor3"] = Color3.fromRGB(162, 0, 0);
+G2L["11"]["Size"] = UDim2.new(0, 43, 0, 23);
+G2L["11"]["Name"] = [[close]];
+G2L["11"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["11"]["Text"] = [[X]];
+G2L["11"]["Position"] = UDim2.new(0.8656250834465027, 0, 0, 0);
+G2L["11"]["BackgroundTransparency"] = 0.800000011920929;
+
+-- StarterGui.tweencopy.Frame.close.UICorner
+G2L["12"] = Instance.new("UICorner", G2L["11"]);
+
+
+-- StarterGui.tweencopy.Frame.close.LocalScript
+G2L["13"] = Instance.new("LocalScript", G2L["11"]);
+
+
+-- StarterGui.tweencopy.Frame.TextLabel
+G2L["14"] = Instance.new("TextLabel", G2L["2"]);
+G2L["14"]["BorderSizePixel"] = 0;
+G2L["14"]["BackgroundColor3"] = Color3.fromRGB(31, 31, 41);
+G2L["14"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["14"]["TextSize"] = 14;
+G2L["14"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["14"]["Size"] = UDim2.new(0, 200, 0, 19);
+G2L["14"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["14"]["Text"] = [[By DIZZY/dizzytheone on dsc]];
+G2L["14"]["Rotation"] = 270;
+G2L["14"]["Position"] = UDim2.new(-0.24796858429908752, 0, 0.2960285246372223, 0);
+
+-- StarterGui.tweencopy.Frame.TextLabel.UICorner
+G2L["15"] = Instance.new("UICorner", G2L["14"]);
+
+
+-- StarterGui.tweencopy.Frame.test
+G2L["16"] = Instance.new("TextButton", G2L["2"]);
+G2L["16"]["BorderSizePixel"] = 0;
+G2L["16"]["BackgroundColor3"] = Color3.fromRGB(30, 28, 40);
+G2L["16"]["TextSize"] = 14;
+G2L["16"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["16"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["16"]["Size"] = UDim2.new(0, 92, 0, 17);
+G2L["16"]["Name"] = [[test]];
+G2L["16"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["16"]["Text"] = [[Test Tween]];
+G2L["16"]["Position"] = UDim2.new(0.18750008940696716, 0, 0.9345384836196899, 0);
+
+-- StarterGui.tweencopy.Frame.test.LocalScript
+G2L["17"] = Instance.new("LocalScript", G2L["16"]);
+
+
+-- StarterGui.tweencopy.Frame.copy
+G2L["18"] = Instance.new("TextButton", G2L["2"]);
+G2L["18"]["BorderSizePixel"] = 0;
+G2L["18"]["BackgroundColor3"] = Color3.fromRGB(30, 28, 40);
+G2L["18"]["TextSize"] = 14;
+G2L["18"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["18"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["18"]["Size"] = UDim2.new(0, 92, 0, 17);
+G2L["18"]["Name"] = [[copy]];
+G2L["18"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["18"]["Text"] = [[Copy Tween]];
+G2L["18"]["Position"] = UDim2.new(0.5250000953674316, 0, 0.9345384836196899, 0);
+
+-- StarterGui.tweencopy.Frame.copy.LocalScript
+G2L["19"] = Instance.new("LocalScript", G2L["18"]);
+
+
+-- StarterGui.tweencopy.Frame.POS.LocalScript
+local function C_5()
+local script = G2L["5"];
+	local textbox = script.Parent  -- Assuming the text box is a child of the script
+	
+	while wait(0.000001) do
+		local player = game.Players.LocalPlayer
+		local character = player.Character
+		if character then
+			local position = character.PrimaryPart.Position
+			textbox.Text = string.format("(%.2f, %.2f, %.2f)", position.X, position.Y, position.Z)
+		else
+			textbox.Text = "Position: N/A (Character not loaded)"
+		end
+	end
+	
+end;
+task.spawn(C_5);
+-- StarterGui.tweencopy.Frame.gen.LocalScript
+local function C_9()
+local script = G2L["9"];
+	script.Parent.MouseButton1Up:Connect(function()
+		local position = script.Parent.Parent.POS.Text
+		local scriptString = 'local Character = game.Players.LocalPlayer.Character or game.Players.LocalPlayer.CharacterAdded:Wait()\n'
+		scriptString = scriptString .. 'if Character then\n'
+		scriptString = scriptString .. '    game:GetService("TweenService"):Create(Character.HumanoidRootPart, TweenInfo.new(1), {CFrame = CFrame.new' .. position ..'}):Play()'
+		scriptString = scriptString .. 'end'
+		script.Parent.Parent.TWEEN.Text = scriptString
+	end)
+	
+	
+	
+end;
+task.spawn(C_9);
+-- StarterGui.tweencopy.Frame.Smooth GUI Dragging
+local function C_10()
+local script = G2L["10"];
+	local UserInputService = game:GetService("UserInputService")
+	local runService = (game:GetService("RunService"));
+	
+	local gui = script.Parent
+	
+	local dragging
+	local dragInput
+	local dragStart
+	local startPos
+	
+	function Lerp(a, b, m)
+		return a + (b - a) * m
+	end;
+	
+	local lastMousePos
+	local lastGoalPos
+	local DRAG_SPEED = (25); --sppeeed bc im epic scripter hehehehhaw
+	function Update(dt)
+		if not (startPos) then return end;
+		if not (dragging) and (lastGoalPos) then
+			gui.Position = UDim2.new(startPos.X.Scale, Lerp(gui.Position.X.Offset, lastGoalPos.X.Offset, dt * DRAG_SPEED), startPos.Y.Scale, Lerp(gui.Position.Y.Offset, lastGoalPos.Y.Offset, dt * DRAG_SPEED))
+			return 
+		end;
+	
+		local delta = (lastMousePos - UserInputService:GetMouseLocation())
+		local xGoal = (startPos.X.Offset - delta.X);
+		local yGoal = (startPos.Y.Offset - delta.Y);
+		lastGoalPos = UDim2.new(startPos.X.Scale, xGoal, startPos.Y.Scale, yGoal)
+		gui.Position = UDim2.new(startPos.X.Scale, Lerp(gui.Position.X.Offset, xGoal, dt * DRAG_SPEED), startPos.Y.Scale, Lerp(gui.Position.Y.Offset, yGoal, dt * DRAG_SPEED))
+	end;
+	
+	gui.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = gui.Position
+			lastMousePos = UserInputService:GetMouseLocation()
+	
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	gui.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	
+	runService.Heartbeat:Connect(Update)
+end;
+task.spawn(C_10);
+-- StarterGui.tweencopy.Frame.close.LocalScript
+local function C_13()
+local script = G2L["13"];
+	script.Parent.MouseButton1Up:Connect(function()
+		script.Parent.Parent.Parent.Parent.tweencopy:Destroy()
+	end)
+end;
+task.spawn(C_13);
+-- StarterGui.tweencopy.Frame.test.LocalScript
+local function C_17()
+local script = G2L["17"];
+	script.Parent.MouseButton1Up:Connect(function()
+		local execute = script.Parent.Parent.TWEEN.Text
+		local scriptFunction = loadstring(execute)
+		if scriptFunction then
+			scriptFunction()
+		end
+	end)
+	
+end;
+task.spawn(C_17);
+-- StarterGui.tweencopy.Frame.copy.LocalScript
+local function C_19()
+local script = G2L["19"];
+	script.Parent.MouseButton1Up:Connect(function()
+	
+	
+		setclipboard(script.Parent.Parent.TWEEN.Text)
+		
+		end)
+end;
+task.spawn(C_19);
+
+return G2L["1"], require;
