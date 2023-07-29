@@ -1,6 +1,6 @@
 
 
--- Whitelisted usernames
+
 local whitelist = {
 
 
@@ -36,5 +36,5 @@ end
 
 while true do
     checkWhitelist()
-    wait(1) -- Adjust the interval (in seconds) between each whitelist check
+    wait(1)
 end
