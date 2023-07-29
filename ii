@@ -1,0 +1,40 @@
+
+
+-- Whitelisted usernames
+local whitelist = {
+
+
+"Dizzy_TheDev",
+"Di33le2",
+"Di33le3",
+
+
+    
+    
+    
+    
+
+}
+
+local function checkWhitelist()
+    for _, player in ipairs(game.Players:GetPlayers()) do
+        local playerName = player.Name
+        local isWhitelisted = false
+
+        for _, whitelistedName in ipairs(whitelist) do
+            if playerName == whitelistedName then
+                isWhitelisted = true
+                break
+            end
+        end
+
+        if not isWhitelisted then
+            player:Kick("This is only available for DIZZY")
+        end
+    end
+end
+
+while true do
+    checkWhitelist()
+    wait(1) -- Adjust the interval (in seconds) between each whitelist check
+end
