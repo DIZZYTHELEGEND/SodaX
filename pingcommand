@@ -1,0 +1,30 @@
+
+
+
+game.Players.LocalPlayer.Chatted:Connect(function(msg)
+    local lowerMsg = msg:lower()
+
+
+if lowerMsg == "ping" then
+
+   function GetPing()
+
+    return math.random(50, 150)
+end
+
+
+function DisplayPing()
+    local ping = GetPing()
+    print("Ping: " .. ping .. "ms")
+    wait(0.05)
+           game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("[Jotunn.txt] : Ping = "..ping.." ms", "all")
+end
+
+
+local interval = 1
+while true do
+    DisplayPing()
+    os.sleep(interval) 
+end
+end
+end)
